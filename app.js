@@ -474,7 +474,7 @@
               }));
 
               liveStreamState.textContent = 'Go Live 2000x نشط';
-              hudStatusTitle.textContent = `البث المباشر نشط ومحمي ضد الباند (2000x)...`;
+              hudStatusTitle.textContent = `البث المباشر نشط (2000x Turbo)...`;
               tickerLogText.textContent = `[LIVE 2000x] Stream is watched & accumulating hours safely!`;
               startRealtimeClock(targetHours, 'stream');
             }, 600);
