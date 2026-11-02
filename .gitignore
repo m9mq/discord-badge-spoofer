@@ -6,3 +6,4 @@ __pycache__/
 *.pyo
 .DS_Store
 discord-badge-spoofer-main/
+cloudflared.exe

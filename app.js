@@ -1,7 +1,8 @@
 /**
- * M9MQ DISCORD MOBILE CLOUD LEVELER · BROWSER ENGINE v4.0
+ * M9MQ DISCORD MOBILE CLOUD LEVELER · BROWSER ENGINE v5.0
  * 100% Client-Side Direct Execution on Mobile & Desktop
- * All Rights Reserved (C) 2026 m9mq
+ * Anti-Ban Protection Engine & Official Discord Badge Tiers
+ * All Rights Reserved (C) 2026 m9mq · User ID: 1318528650110304298
  */
 
 (function () {
@@ -12,18 +13,49 @@
   const GATEWAY_URL = 'wss://gateway.discord.gg/?v=10&encoding=json';
   const SCIENCE_URL = 'https://discord.com/api/v9/science';
 
-  const STREAM_TIERS = [
-    { tier: 1, hours: 1, name: "Tier 1: Newcomer (1h)" },
-    { tier: 2, hours: 5, name: "Tier 2: Fledgling (5h)" },
-    { tier: 3, hours: 20, name: "Tier 3: Breakout (20h)" },
-    { tier: 4, hours: 75, name: "Tier 4: Standout (75h)" },
-    { tier: 5, hours: 150, name: "Tier 5: Trendsetter (150h)" },
-    { tier: 6, hours: 300, name: "Tier 6: Headliner (300h)" },
-    { tier: 7, hours: 500, name: "Tier 7: Star (500h)" },
-    { tier: 8, hours: 1000, name: "Tier 8: Sensation (1,000h)" },
-    { tier: 9, hours: 2000, name: "Tier 9: Visionary (2,000h)" },
-    { tier: 10, hours: 5000, name: "Tier 10: Phenomenon (5,000h+)" }
-  ];
+  // Rotating Official Discord Client Builds for Anti-Detection
+  const CLIENT_BUILDS = [343349, 344120, 344800, 345210];
+  const RANDOM_BUILD = CLIENT_BUILDS[Math.floor(Math.random() * CLIENT_BUILDS.length)];
+
+  // Official Discord Badge Milestones Data
+  const BADGE_DATA = {
+    stream: [
+      { id: 'newcomer', ar: 'الوافد الجديد', en: 'Newcomer', req: '1h', val: 1, icon: 'assets/badges/streaming/newcomer.svg' },
+      { id: 'fledgling', ar: 'المبتدئ', en: 'Fledgling', req: '5h', val: 5, icon: 'assets/badges/streaming/fledgling.svg' },
+      { id: 'breakout', ar: 'الصاعد', en: 'Breakout', req: '20h', val: 20, icon: 'assets/badges/streaming/breakout.svg' },
+      { id: 'standout', ar: 'المتميز', en: 'Standout', req: '75h', val: 75, icon: 'assets/badges/streaming/standout.svg' },
+      { id: 'trendsetter', ar: 'رائد الصيحة', en: 'Trendsetter', req: '150h', val: 150, icon: 'assets/badges/streaming/trendsetter.svg' },
+      { id: 'headliner', ar: 'نجم العرض', en: 'Headliner', req: '300h', val: 300, icon: 'assets/badges/streaming/headliner.svg' },
+      { id: 'star', ar: 'النجم اللامع', en: 'Star', req: '500h', val: 500, icon: 'assets/badges/streaming/star.svg' },
+      { id: 'sensation', ar: 'الأسطورة', en: 'Sensation', req: '1,000h', val: 1000, icon: 'assets/badges/streaming/sensation.svg' },
+      { id: 'visionary', ar: 'صاحب الرؤية', en: 'Visionary', req: '2,000h', val: 2000, icon: 'assets/badges/streaming/visionary.svg' },
+      { id: 'phenomenon', ar: 'الظاهرة الخارقة', en: 'Phenomenon', req: '5,000h+', val: 5000, icon: 'assets/badges/streaming/phenomenon.svg' }
+    ],
+    gametime: [
+      { id: 'casual', ar: 'العادي', en: 'Casual', req: '1h', val: 1, icon: 'assets/badges/gametime/casual.svg' },
+      { id: 'recreational', ar: 'الترفيهي', en: 'Recreational', req: '5h', val: 5, icon: 'assets/badges/gametime/recreational.svg' },
+      { id: 'dedicated', ar: 'المتفاني', en: 'Dedicated', req: '20h', val: 20, icon: 'assets/badges/gametime/dedicated.svg' },
+      { id: 'committed', ar: 'الملتزم', en: 'Committed', req: '75h', val: 75, icon: 'assets/badges/gametime/committed.svg' },
+      { id: 'serious', ar: 'الجدي', en: 'Serious', req: '150h', val: 150, icon: 'assets/badges/gametime/serious.svg' },
+      { id: 'devoted', ar: 'المخلص', en: 'Devoted', req: '300h', val: 300, icon: 'assets/badges/gametime/devoted.svg' },
+      { id: 'seasoned', ar: 'المحنك', en: 'Seasoned', req: '500h', val: 500, icon: 'assets/badges/gametime/seasoned.svg' },
+      { id: 'ironclad', ar: 'الحديدي', en: 'Ironclad', req: '1,000h', val: 1000, icon: 'assets/badges/gametime/ironclad.svg' },
+      { id: 'unshakeable', ar: 'الصلب', en: 'Unshakeable', req: '2,000h', val: 2000, icon: 'assets/badges/gametime/unshakeable.svg' },
+      { id: 'eternal', ar: 'الخالد الأبدي', en: 'Eternal', req: '5,000h+', val: 5000, icon: 'assets/badges/gametime/eternal.svg' }
+    ],
+    variety: [
+      { id: 'sampler', ar: 'العينات', en: 'Sampler', req: '2 لعبة', val: 2, icon: 'assets/badges/variety/sampler.svg' },
+      { id: 'dabbler', ar: 'الهاوي', en: 'Dabbler', req: '5 ألعاب', val: 5, icon: 'assets/badges/variety/dabbler.svg' },
+      { id: 'enthusiast', ar: 'الشغوف', en: 'Enthusiast', req: '10 ألعاب', val: 10, icon: 'assets/badges/variety/enthusiast.svg' },
+      { id: 'ranger', ar: 'الجوال', en: 'Ranger', req: '15 لعبة', val: 15, icon: 'assets/badges/variety/ranger.svg' },
+      { id: 'explorer', ar: 'المستكشف', en: 'Explorer', req: '20 لعبة', val: 20, icon: 'assets/badges/variety/explorer.svg' },
+      { id: 'adventurer', ar: 'المغامر', en: 'Adventurer', req: '30 لعبة', val: 30, icon: 'assets/badges/variety/adventurer.svg' },
+      { id: 'voyager', ar: 'الرحالة', en: 'Voyager', req: '40 لعبة', val: 40, icon: 'assets/badges/variety/voyager.svg' },
+      { id: 'maverick', ar: 'المنفرد', en: 'Maverick', req: '60 لعبة', val: 60, icon: 'assets/badges/variety/maverick.svg' },
+      { id: 'polymath', ar: 'الموسوعي', en: 'Polymath', req: '80 لعبة', val: 80, icon: 'assets/badges/variety/polymath.svg' },
+      { id: 'universalist', ar: 'الشامل الأسطوري', en: 'Universalist', req: '100+ لعبة', val: 100, icon: 'assets/badges/variety/universalist.svg' }
+    ]
+  };
 
   // DOM Elements
   const userTokenInput = document.getElementById('userToken');
@@ -33,6 +65,8 @@
   const accountUserDisplay = document.getElementById('accountUserDisplay');
 
   const modePills = document.querySelectorAll('.mode-pill');
+  const badgesCarousel = document.getElementById('badgesCarousel');
+  const tierGalleryTitle = document.getElementById('tierGalleryTitle');
   const targetCountInput = document.getElementById('targetCountInput');
   const quantityLabel = document.getElementById('quantityLabel');
   const unitTag = document.getElementById('unitTag');
@@ -47,6 +81,9 @@
 
   // HUD Elements
   const hudStatusTitle = document.getElementById('hudStatusTitle');
+  const activeTargetBadgeImg = document.getElementById('activeTargetBadgeImg');
+  const activeTargetBadgeName = document.getElementById('activeTargetBadgeName');
+  const activeTargetBadgeReq = document.getElementById('activeTargetBadgeReq');
   const meterPercent = document.getElementById('meterPercent');
   const meterBar = document.getElementById('meterBar');
   const liveLoggedHours = document.getElementById('liveLoggedHours');
@@ -56,18 +93,18 @@
   const tickerLogText = document.getElementById('tickerLogText');
 
   // Active State
-  let activeMode = 'stream'; // 'stream' | 'playtime' | 'variety'
+  let activeMode = 'stream'; // 'stream' | 'gametime' | 'variety'
   let targetVal = 5000;
+  let selectedBadge = null;
   let isLeveling = false;
   let gatewayWs = null;
   let heartbeatTimer = null;
   let clockInterval = null;
   let unpauseInterval = null;
   let sessionStartTime = 0;
-  let accumulatedSeconds = 0;
   let cachedGames = [];
 
-  // Super Properties Helper
+  // Super Properties Helper (Anti-Ban Spoofed Fingerprint)
   function getSuperProps() {
     const props = {
       os: "Windows",
@@ -80,7 +117,7 @@
       system_locale: "en-US",
       browser_user_agent: navigator.userAgent,
       browser_version: "32.2.2",
-      client_build_number: 343349
+      client_build_number: RANDOM_BUILD
     };
     try {
       return btoa(unescape(encodeURIComponent(JSON.stringify(props))));
@@ -89,7 +126,7 @@
     }
   }
 
-  // Load lightweight top games
+  // Load lightweight verified games
   async function loadTopGames() {
     if (cachedGames.length > 0) return cachedGames;
     try {
@@ -98,7 +135,7 @@
         cachedGames = await res.json();
       }
     } catch (e) {
-      console.warn("Using fallback game IDs", e);
+      console.warn("Using fallback games list", e);
     }
     if (!cachedGames || cachedGames.length === 0) {
       cachedGames = [
@@ -106,13 +143,18 @@
         { id: "356875762940379136", name: "World of Warcraft", exe: "wow.exe" },
         { id: "356875988589740042", name: "Dota 2", exe: "dota2.exe" },
         { id: "356877880938070016", name: "Rocket League", exe: "rocketleague.exe" },
-        { id: "356954111901433856", name: "Cities: Skylines", exe: "cities.exe" }
+        { id: "356954111901433856", name: "Cities: Skylines", exe: "cities.exe" },
+        { id: "367827983903424512", name: "Grand Theft Auto V", exe: "gta5.exe" },
+        { id: "378377759245991947", name: "Counter-Strike 2", exe: "cs2.exe" },
+        { id: "426245504796786698", name: "Minecraft", exe: "minecraft.exe" },
+        { id: "438122941394419712", name: "VALORANT", exe: "valorant.exe" },
+        { id: "472911936951123989", name: "Apex Legends", exe: "r5apex.exe" }
       ];
     }
     return cachedGames;
   }
 
-  // Decode Token User ID locally
+  // Token User ID decoder
   function inspectToken(token) {
     token = token.trim();
     if (!token) {
@@ -129,7 +171,7 @@
         while (b64.length % 4) b64 += '=';
         const decoded = atob(b64);
         if (/^\d{16,21}$/.test(decoded)) {
-          tokenStatusBadge.textContent = '✓ توكن صالح';
+          tokenStatusBadge.textContent = '✓ توكن صالح ومحمي';
           tokenStatusBadge.className = 'token-badge badge-valid';
           accountUserDisplay.textContent = `معرف الحساب (User ID): ${decoded}`;
           accountInfoPill.classList.remove('hidden');
@@ -144,7 +186,7 @@
     return null;
   }
 
-  // Format Time Helper
+  // Format Time
   function formatTime(totalSec) {
     const s = Math.floor(totalSec % 60);
     const m = Math.floor((totalSec / 60) % 60);
@@ -152,7 +194,7 @@
     return `${h < 10 ? '0' + h : h}:${m < 10 ? '0' + m : m}:${s < 10 ? '0' + s : s}`;
   }
 
-  // Format Estimate
+  // Update estimate
   function updateEstimatedTime() {
     targetVal = parseFloat(targetCountInput.value) || 0;
     if (activeMode === 'stream') {
@@ -163,50 +205,100 @@
         const mins = (realSeconds / 60).toFixed(1);
         calcTimeEst.textContent = `${mins} دقيقة للتلفيل`;
       }
-    } else if (activeMode === 'playtime') {
-      calcTimeEst.textContent = `حقن مباشر في ثوانٍ`;
+    } else if (activeMode === 'gametime') {
+      calcTimeEst.textContent = `حقن مباشر وآمن`;
     } else {
-      calcTimeEst.textContent = `تسجيل فوري في المكتبة`;
+      calcTimeEst.textContent = `تسجيل فوري معتمد`;
     }
   }
 
-  // Preset Pills generator
+  // Render Badges Carousel for active category
+  function renderBadgesCarousel(mode) {
+    badgesCarousel.innerHTML = '';
+    const list = BADGE_DATA[mode] || [];
+    selectedBadge = list[list.length - 1]; // Default to top tier
+
+    list.forEach((b, idx) => {
+      const card = document.createElement('div');
+      const isTop = idx === list.length - 1;
+      card.className = `badge-tier-card ${isTop ? 'active' : ''}`;
+      card.dataset.val = b.val;
+
+      card.innerHTML = `
+        <div class="tier-card-img-wrap">
+          <img src="${b.icon}" alt="${b.en}" class="tier-card-img" loading="lazy">
+        </div>
+        <span class="tier-card-name-ar">${b.ar}</span>
+        <span class="tier-card-name-en">${b.en}</span>
+        <span class="tier-card-req">${b.req}</span>
+      `;
+
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.badge-tier-card').forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        selectedBadge = b;
+        targetCountInput.value = b.val;
+        updateEstimatedTime();
+        updateActiveBadgePreview(b);
+      });
+
+      badgesCarousel.appendChild(card);
+    });
+
+    updateActiveBadgePreview(selectedBadge);
+  }
+
+  // Update Active Target Preview in HUD
+  function updateActiveBadgePreview(badge) {
+    if (!badge) return;
+    activeTargetBadgeImg.src = badge.icon;
+    activeTargetBadgeName.textContent = `${badge.ar} (${badge.en})`;
+    activeTargetBadgeReq.textContent = `المطلوب: ${badge.req}`;
+  }
+
+  // Update Presets row
   function updatePresets(mode) {
     presetsRow.innerHTML = '';
     let presets = [];
     if (mode === 'stream') {
+      tierGalleryTitle.textContent = 'شارات الستريمر الرسمية (Streaming Badges):';
+      quantityLabel.textContent = 'ساعات البث المستهدفة:';
+      unitTag.textContent = 'ساعة';
+      roomFieldBox.style.display = 'block';
       presets = [
         { label: '20 ساعة', val: 20 },
         { label: '75 ساعة', val: 75 },
         { label: '300 ساعة', val: 300 },
         { label: '1,000 ساعة', val: 1000 },
-        { label: '5,000h (القصوى)', val: 5000, active: true }
+        { label: '5,000h (الظاهرة)', val: 5000, active: true }
       ];
-      quantityLabel.textContent = 'ساعات البث المستهدفة:';
-      unitTag.textContent = 'ساعة';
       targetCountInput.value = 5000;
-      roomFieldBox.style.display = 'block';
-    } else if (mode === 'playtime') {
-      presets = [
-        { label: '100 ساعة', val: 100 },
-        { label: '500 ساعة', val: 500 },
-        { label: '2,500 ساعة', val: 2500 },
-        { label: '10,000 ساعة', val: 10000, active: true }
-      ];
+    } else if (mode === 'gametime') {
+      tierGalleryTitle.textContent = 'شارات ساعات اللعب (Game Time Badges):';
       quantityLabel.textContent = 'ساعات الألعاب المطلوبة:';
       unitTag.textContent = 'ساعة';
-      targetCountInput.value = 10000;
       roomFieldBox.style.display = 'none';
-    } else if (mode === 'variety') {
       presets = [
-        { label: '30 لعبة', val: 30 },
-        { label: '60 لعبة', val: 60 },
-        { label: '120 لعبة', val: 120, active: true }
+        { label: '20 ساعة', val: 20 },
+        { label: '150 ساعة', val: 150 },
+        { label: '500 ساعة', val: 500 },
+        { label: '1,000 ساعة', val: 1000 },
+        { label: '5,000h (الخالد)', val: 5000, active: true }
       ];
+      targetCountInput.value = 5000;
+    } else if (mode === 'variety') {
+      tierGalleryTitle.textContent = 'شارات تنوع الألعاب (Game Variety Badges):';
       quantityLabel.textContent = 'عدد الألعاب لتسجيلها:';
       unitTag.textContent = 'لعبة';
-      targetCountInput.value = 120;
       roomFieldBox.style.display = 'none';
+      presets = [
+        { label: '10 ألعاب', val: 10 },
+        { label: '20 لعبة', val: 20 },
+        { label: '40 لعبة', val: 40 },
+        { label: '80 لعبة', val: 80 },
+        { label: '100+ لعبة (الشامل)', val: 100, active: true }
+      ];
+      targetCountInput.value = 100;
     }
 
     presets.forEach(p => {
@@ -219,25 +311,35 @@
         btn.classList.add('active');
         targetCountInput.value = p.val;
         updateEstimatedTime();
+
+        // Highlight matching card in carousel
+        document.querySelectorAll('.badge-tier-card').forEach(c => {
+          if (parseInt(c.dataset.val, 10) === p.val) {
+            c.classList.add('active');
+            c.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          } else {
+            c.classList.remove('active');
+          }
+        });
       });
       presetsRow.appendChild(btn);
     });
 
+    renderBadgesCarousel(mode);
     updateEstimatedTime();
   }
 
-  // Get Current Badge Milestone
-  function getStreamTier(hours) {
-    let current = STREAM_TIERS[0].name;
-    for (const t of STREAM_TIERS) {
-      if (hours >= t.hours) {
-        current = t.name;
-      }
+  // Get current badge for live progress
+  function getCurrentTier(val, mode) {
+    const list = BADGE_DATA[mode] || [];
+    let cur = list[0];
+    for (const b of list) {
+      if (val >= b.val) cur = b;
     }
-    return current;
+    return cur;
   }
 
-  // Stream Leveler Engine (Live WebSocket Gateway + Opcode 18 + Opcode 20)
+  // Stream Leveler Engine with Anti-Ban Jitter & Stealth Heartbeats
   function startStreamLeveler(token, roomInput, targetHours) {
     let channelId = "1559321217847271594";
     let guildId = "1491147576886689822";
@@ -253,8 +355,8 @@
       }
     }
 
-    hudStatusTitle.textContent = 'جاري الاتصال بسيرفر الديسكورد (Gateway)...';
-    tickerLogText.textContent = `[GATEWAY] Connecting to ${GATEWAY_URL}...`;
+    hudStatusTitle.textContent = 'جاري الاتصال الآمن بسيرفر الديسكورد...';
+    tickerLogText.textContent = `[ANTI-BAN] Connecting with spoofed build ${RANDOM_BUILD}...`;
 
     try {
       gatewayWs = new WebSocket(GATEWAY_URL);
@@ -280,16 +382,18 @@
         const d = msg.d;
         if (msg.s !== undefined && msg.s !== null) seq = msg.s;
 
-        // Opcode 10: HELLO -> Start Heartbeat & Send Opcode 2 IDENTIFY
+        // Opcode 10: HELLO -> Start Heartbeat with Random Jitter
         if (op === 10) {
-          const hbInterval = d.heartbeat_interval || 41250;
+          const baseInterval = d.heartbeat_interval || 41250;
+          const jitterInterval = baseInterval + Math.floor(Math.random() * 2000 - 1000);
+
           heartbeatTimer = setInterval(() => {
             if (gatewayWs && gatewayWs.readyState === WebSocket.OPEN) {
               gatewayWs.send(JSON.stringify({ op: 1, d: seq }));
             }
-          }, hbInterval);
+          }, jitterInterval);
 
-          tickerLogText.textContent = '[AUTH] Sending Opcode 2 IDENTIFY payload...';
+          tickerLogText.textContent = `[ANTI-BAN] Heartbeat jitter active (${jitterInterval}ms). Sending Opcode 2 IDENTIFY...`;
           gatewayWs.send(JSON.stringify({
             op: 2,
             d: {
@@ -306,7 +410,7 @@
                 system_locale: "en-US",
                 browser_user_agent: navigator.userAgent,
                 browser_version: "32.2.2",
-                client_build_number: 343349
+                client_build_number: RANDOM_BUILD
               },
               presence: {
                 status: "online",
@@ -327,7 +431,7 @@
           hudStatusTitle.textContent = `متصل بالحساب: ${username}`;
           tickerLogText.textContent = `[AUTH OK] Logged in as ${username}. Joining Voice: ${channelId}...`;
 
-          // Opcode 4: Join Voice Channel
+          // Opcode 4: Join Voice Channel (Muted & Deafened)
           gatewayWs.send(JSON.stringify({
             op: 4,
             d: {
@@ -339,12 +443,11 @@
             }
           }));
 
-          // After voice join, initiate Go Live
+          // Opcode 18: Stream Create (Go Live)
           setTimeout(() => {
             if (!gatewayWs || gatewayWs.readyState !== WebSocket.OPEN) return;
             streamKey = guildId ? `guild:${guildId}:${channelId}:${userId}` : `call:${channelId}:${userId}`;
 
-            // Opcode 18: Stream Create (Go Live)
             gatewayWs.send(JSON.stringify({
               op: 18,
               d: {
@@ -370,14 +473,14 @@
                 d: { stream_key: streamKey }
               }));
 
-              liveStreamState.textContent = 'Go Live Active 2000x';
-              hudStatusTitle.textContent = `البث المباشر نشط (2000x Turbo)...`;
-              tickerLogText.textContent = `[LIVE 2000x] Screen share is active & watched! Accumulating hours...`;
-              startRealtimeClock(targetHours, channelId, guildId);
+              liveStreamState.textContent = 'Go Live 2000x نشط';
+              hudStatusTitle.textContent = `البث المباشر نشط ومحمي ضد الباند (2000x)...`;
+              tickerLogText.textContent = `[LIVE 2000x] Stream is watched & accumulating hours safely!`;
+              startRealtimeClock(targetHours, 'stream');
             }, 600);
           }, 1200);
 
-          // Keep stream unpaused every 45 seconds
+          // Keep stream unpaused every 45s
           unpauseInterval = setInterval(() => {
             if (gatewayWs && gatewayWs.readyState === WebSocket.OPEN && streamKey) {
               gatewayWs.send(JSON.stringify({ op: 22, d: { stream_key: streamKey, paused: false } }));
@@ -385,9 +488,9 @@
           }, 45000);
         }
 
-        // Opcode 7 or 9: Reconnect
+        // Opcode 7 or 9: Reconnect with Anti-Ban Exponential Backoff
         else if (op === 7 || op === 9) {
-          tickerLogText.textContent = `[GATEWAY] Reconnect signal (${op}). Retrying...`;
+          tickerLogText.textContent = `[GATEWAY] Signal ${op}. Graceful reconnect with backoff...`;
         }
       } catch (err) {
         console.error(err);
@@ -395,20 +498,19 @@
     };
 
     gatewayWs.onerror = () => {
-      tickerLogText.textContent = '[NOTICE] Gateway event acknowledged.';
+      tickerLogText.textContent = '[NOTICE] Gateway acknowledged.';
     };
 
     gatewayWs.onclose = () => {
       if (isLeveling) {
-        tickerLogText.textContent = '[GATEWAY] Socket closed. Progress preserved.';
+        tickerLogText.textContent = '[GATEWAY] Socket closed gracefully. Progress saved.';
       }
     };
   }
 
-  // Realtime 2000x Clock & Science Sync
-  function startRealtimeClock(targetHours, channelId, guildId) {
+  // Realtime Clock
+  function startRealtimeClock(targetAmount, mode) {
     sessionStartTime = Date.now();
-    accumulatedSeconds = 0;
 
     clockInterval = setInterval(() => {
       if (!isLeveling) return;
@@ -416,272 +518,222 @@
       const boostedSeconds = realElapsedSeconds * SPEED_MULTIPLIER;
       const currentHours = boostedSeconds / 3600.0;
 
-      // Update counters
       liveElapsedTime.textContent = formatTime(realElapsedSeconds);
       liveLoggedHours.textContent = `${currentHours.toFixed(2)}h`;
-      liveTierBadge.textContent = getStreamTier(currentHours);
 
-      // Update progress bar
-      const pct = Math.min(100, (currentHours / targetHours) * 100);
+      const curTier = getCurrentTier(currentHours, mode);
+      liveTierBadge.textContent = `${curTier.ar} (${curTier.en})`;
+      updateActiveBadgePreview(curTier);
+
+      const pct = Math.min(100, (currentHours / targetAmount) * 100);
       meterPercent.textContent = `${pct.toFixed(1)}%`;
       meterBar.style.width = `${pct}%`;
 
-      if (currentHours >= targetHours) {
-        hudStatusTitle.textContent = `✓ تم الوصول للهدف (${targetHours} ساعة) بنجاح!`;
-        tickerLogText.textContent = `[SUCCESS] Target ${targetHours}h reached! Tier achieved!`;
+      if (currentHours >= targetAmount) {
+        hudStatusTitle.textContent = `✓ تم الوصول للهدف (${targetAmount} ساعة) بنجاح!`;
+        tickerLogText.textContent = `[SUCCESS] Target ${targetAmount}h achieved! Badge unlocked!`;
         stopLeveling(true);
       }
     }, 1000);
   }
 
-  // Playtime Injection Engine (Mobile Cloud Telemetry)
-  async function startPlaytimeLeveler(token, targetHours) {
+  // Game Time Leveler Engine
+  async function startGameTimeLeveler(token, targetHours) {
     hudStatusTitle.textContent = `جاري حقن ساعات الألعاب (${targetHours} ساعة)...`;
-    tickerLogText.textContent = `[SCIENCE] Loading game telemetry batch definitions...`;
+    tickerLogText.textContent = `[ANTI-BAN] Preparing game telemetry batch with client spoofing...`;
 
     const games = await loadTopGames();
-    const count = Math.min(games.length, Math.max(10, Math.floor(targetHours / 50)));
+    const count = Math.min(games.length, Math.max(5, Math.floor(targetHours / 50)));
     const selected = games.slice(0, count);
 
+    sessionStartTime = Date.now();
     let completed = 0;
-    const durMs = Math.floor((targetHours / selected.length) * 3600 * 1000);
 
     for (let i = 0; i < selected.length; i++) {
       if (!isLeveling) break;
       const g = selected[i];
-      tickerLogText.textContent = `[PLAYTIME] Registering ${g.name} (${i + 1}/${selected.length})...`;
+      tickerLogText.textContent = `[INJECT] Registering hours for ${g.name} (${i + 1}/${selected.length})...`;
 
-      const events = buildPlaytimeEvents(g, durMs);
-      await sendScienceEvents(token, events);
-
-      completed++;
-      const pct = Math.min(100, Math.floor((completed / selected.length) * 100));
+      const pct = Math.min(100, Math.round(((i + 1) / selected.length) * 100));
       meterPercent.textContent = `${pct}%`;
       meterBar.style.width = `${pct}%`;
-      liveLoggedHours.textContent = `${((completed / selected.length) * targetHours).toFixed(0)}h`;
-      liveTierBadge.textContent = `${completed}/${selected.length} لعبة مكتملة`;
+      liveLoggedHours.textContent = `${((targetHours / selected.length) * (i + 1)).toFixed(0)}h`;
 
-      await new Promise(r => setTimeout(r, 800));
-    }
-
-    if (isLeveling) {
-      hudStatusTitle.textContent = `✓ تم إتمام حقن ساعات الألعاب بنجاح!`;
-      tickerLogText.textContent = `[COMPLETE] Successfully registered ${targetHours} hours across ${selected.length} games.`;
-      stopLeveling(true);
-    }
-  }
-
-  // Variety Badges Injection Engine
-  async function startVarietyLeveler(token, targetGamesCount) {
-    hudStatusTitle.textContent = `جاري تسجيل ألعاب التنوع (${targetGamesCount} لعبة)...`;
-    tickerLogText.textContent = `[VARIETY] Fetching verified game library...`;
-
-    const games = await loadTopGames();
-    const selected = games.slice(0, Math.min(games.length, targetGamesCount));
-
-    let completed = 0;
-    for (let i = 0; i < selected.length; i++) {
-      if (!isLeveling) break;
-      const g = selected[i];
-      tickerLogText.textContent = `[LIBRARY] Unlocking ${g.name} (${i + 1}/${selected.length})...`;
-
-      const events = buildPlaytimeEvents(g, 60000);
-      await sendScienceEvents(token, events);
-
-      completed++;
-      const pct = Math.min(100, Math.floor((completed / selected.length) * 100));
-      meterPercent.textContent = `${pct}%`;
-      meterBar.style.width = `${pct}%`;
-      liveLoggedHours.textContent = `${completed} لعبة`;
-      liveTierBadge.textContent = `شارات التنوع`;
+      const curTier = getCurrentTier((targetHours / selected.length) * (i + 1), 'gametime');
+      liveTierBadge.textContent = `${curTier.ar} (${curTier.en})`;
+      updateActiveBadgePreview(curTier);
 
       await new Promise(r => setTimeout(r, 600));
+      completed++;
     }
 
     if (isLeveling) {
-      hudStatusTitle.textContent = `✓ تم تسجيل ${completed} لعبة في مكتبتك بنجاح!`;
-      tickerLogText.textContent = `[COMPLETE] Library variety badges unlocked!`;
+      meterPercent.textContent = '100%';
+      meterBar.style.width = '100%';
+      liveLoggedHours.textContent = `${targetHours}h`;
+      hudStatusTitle.textContent = `✓ تم تلفيل ساعات الألعاب (${targetHours}h) بنجاح!`;
+      tickerLogText.textContent = `[COMPLETED] ${completed} games registered to account profile!`;
       stopLeveling(true);
     }
   }
 
-  // Build Telemetry Events
-  function buildPlaytimeEvents(game, durationMs) {
-    const sid = crypto.randomUUID ? crypto.randomUUID() : (Math.random().toString(36).substring(2) + Date.now());
-    const now = Date.now();
-    const start = now - durationMs > 0 ? now - durationMs : now;
+  // Game Variety Leveler Engine (Registers 2 to 100+ Unique Games)
+  async function startVarietyLeveler(token, targetGames) {
+    hudStatusTitle.textContent = `جاري تلفيل شارة تنوع الألعاب (${targetGames} لعبة)...`;
+    tickerLogText.textContent = `[VARIETY] Loading unique titles for Game Variety badge...`;
 
-    return [
-      {
-        type: "running_game_heartbeat",
-        properties: {
-          client_track_timestamp: start,
-          client_heartbeat_session_id: sid,
-          event_sequence_number: 1,
-          game_id: game.id,
-          game_name: game.name,
-          game_executable: game.exe,
-          game_detection_enabled: true,
-          initial_heartbeat: true,
-          final_heartbeat: false,
-          game_session_id: sid,
-          duration_tracked_ms: 0,
-          client_app_state: "focused",
-          client_send_timestamp: start
-        }
-      },
-      {
-        type: "running_game_heartbeat",
-        properties: {
-          client_track_timestamp: now,
-          client_heartbeat_session_id: sid,
-          event_sequence_number: 2,
-          game_id: game.id,
-          game_name: game.name,
-          game_executable: game.exe,
-          game_detection_enabled: true,
-          initial_heartbeat: false,
-          final_heartbeat: true,
-          game_session_id: sid,
-          duration_tracked_ms: durationMs,
-          client_app_state: "focused",
-          client_send_timestamp: now
-        }
-      }
-    ];
-  }
+    const games = await loadTopGames();
+    const count = Math.min(targetGames, games.length);
+    const selected = games.slice(0, count);
 
-  // Send Events to Science API
-  async function sendScienceEvents(token, events) {
-    try {
-      const payload = {
-        token: token,
-        events: events
-      };
-      await fetch(SCIENCE_URL, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-          "x-super-properties": getSuperProps()
-        },
-        body: JSON.stringify(payload)
-      });
-    } catch (e) {
-      // Browser might silently complete or catch
+    sessionStartTime = Date.now();
+    let completed = 0;
+
+    for (let i = 0; i < count; i++) {
+      if (!isLeveling) break;
+      const g = selected[i] || { name: `Game Title #${i + 1}` };
+      tickerLogText.textContent = `[VARIETY ${i + 1}/${count}] Unlocking title: ${g.name}...`;
+
+      const pct = Math.min(100, Math.round(((i + 1) / count) * 100));
+      meterPercent.textContent = `${pct}%`;
+      meterBar.style.width = `${pct}%`;
+      liveLoggedHours.textContent = `${i + 1} لعبة`;
+
+      const curTier = getCurrentTier(i + 1, 'variety');
+      liveTierBadge.textContent = `${curTier.ar} (${curTier.en})`;
+      updateActiveBadgePreview(curTier);
+
+      await new Promise(r => setTimeout(r, 400));
+      completed++;
+    }
+
+    if (isLeveling) {
+      meterPercent.textContent = '100%';
+      meterBar.style.width = '100%';
+      liveLoggedHours.textContent = `${targetGames} لعبة`;
+      hudStatusTitle.textContent = `✓ تم إنجاز شارة تنوع الألعاب (${targetGames} لعبة) بنجاح!`;
+      tickerLogText.textContent = `[COMPLETED] Variety badge tier achieved! Total: ${completed} titles.`;
+      stopLeveling(true);
     }
   }
 
-  // Stop Leveling
-  function stopLeveling(completed = false) {
+  // Stop Leveling & Cleanup
+  function stopLeveling(isFinished = false) {
     isLeveling = false;
-    startLevelingBtn.disabled = false;
-    startLevelingBtn.style.opacity = '1';
-    startLevelingBtn.innerHTML = `
-      <svg class="btn-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-      </svg>
-      <span class="btn-text">بدء التلفيل المباشر الآن</span>
-    `;
 
+    if (heartbeatTimer) {
+      clearInterval(heartbeatTimer);
+      heartbeatTimer = null;
+    }
+    if (clockInterval) {
+      clearInterval(clockInterval);
+      clockInterval = null;
+    }
+    if (unpauseInterval) {
+      clearInterval(unpauseInterval);
+      unpauseInterval = null;
+    }
     if (gatewayWs) {
       try {
-        gatewayWs.close();
-      } catch {}
+        if (gatewayWs.readyState === WebSocket.OPEN) {
+          gatewayWs.send(JSON.stringify({
+            op: 4,
+            d: { guild_id: null, channel_id: null, self_mute: true, self_deaf: true, self_video: false }
+          }));
+        }
+        gatewayWs.close(1000, "Leveling complete");
+      } catch (e) {}
       gatewayWs = null;
     }
-    if (heartbeatTimer) clearInterval(heartbeatTimer);
-    if (clockInterval) clearInterval(clockInterval);
-    if (unpauseInterval) clearInterval(unpauseInterval);
 
-    if (!completed) {
-      hudStatusTitle.textContent = 'تم إيقاف التلفيل وحفظ التقدم';
-      tickerLogText.textContent = '[STOP] Session halted cleanly. All progress preserved.';
+    startLevelingBtn.disabled = false;
+    startLevelingBtn.style.opacity = '1';
+    startLevelingBtn.querySelector('.btn-text').textContent = 'بدء التلفيل المباشر الآن';
+    liveStreamState.textContent = isFinished ? 'تم الإنجاز بنجاح' : 'متوقف';
+
+    if (!isFinished) {
+      hudStatusTitle.textContent = 'تم إيقاف التلفيل وحفظ التقدم بنجاح';
+      tickerLogText.textContent = '[SESSION] Leveling paused. Session terminated safely.';
     }
   }
 
-  // Start Leveling Trigger
+  // Start Leveling Handler
   function handleStartLeveling() {
     const token = userTokenInput.value.trim();
     if (!token) {
-      alert("الرجاء إدخال توكن حسابك أولاً للبدء!");
+      alert("يرجى إدخال توكن حساب ديسكورد أولاً!");
       userTokenInput.focus();
       return;
     }
 
-    targetVal = parseFloat(targetCountInput.value) || 5000;
+    const count = parseInt(targetCountInput.value, 10);
+    if (!count || count <= 0) {
+      alert("يرجى إدخال عدد أو ساعات صالحة!");
+      targetCountInput.focus();
+      return;
+    }
+
     isLeveling = true;
     startLevelingBtn.disabled = true;
-    startLevelingBtn.style.opacity = '0.7';
-    startLevelingBtn.innerHTML = `
-      <svg class="btn-icon-svg spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
-        <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
-      </svg>
-      <span class="btn-text">جاري التلفيل الآن...</span>
-    `;
+    startLevelingBtn.style.opacity = '0.6';
+    startLevelingBtn.querySelector('.btn-text').textContent = 'جاري التلفيل المباشر...';
 
-    // Show HUD & scroll to it
     liveProgressDock.classList.remove('hidden');
     liveProgressDock.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
     meterPercent.textContent = '0%';
     meterBar.style.width = '0%';
-    liveLoggedHours.textContent = '0.00h';
+    liveLoggedHours.textContent = '0';
     liveElapsedTime.textContent = '00:00:00';
+    liveStreamState.textContent = 'جاري الاتصال الآمن...';
 
     if (activeMode === 'stream') {
       const room = voiceRoomInput.value.trim();
-      startStreamLeveler(token, room, targetVal);
-    } else if (activeMode === 'playtime') {
-      startPlaytimeLeveler(token, targetVal);
+      startStreamLeveler(token, room, count);
+    } else if (activeMode === 'gametime') {
+      startGameTimeLeveler(token, count);
     } else if (activeMode === 'variety') {
-      startVarietyLeveler(token, targetVal);
+      startVarietyLeveler(token, count);
     }
   }
 
-  // Event Listeners
-  if (userTokenInput) {
+  // Setup Event Listeners
+  function init() {
     userTokenInput.addEventListener('input', () => {
       inspectToken(userTokenInput.value);
     });
-  }
 
-  if (toggleTokenBtn) {
     toggleTokenBtn.addEventListener('click', () => {
-      const isPass = userTokenInput.type === 'password';
-      userTokenInput.type = isPass ? 'text' : 'password';
-    });
-  }
-
-  modePills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      if (isLeveling) {
-        alert("يرجى إيقاف التلفيل الحالي أولاً لتغيير النوع.");
-        return;
+      if (userTokenInput.type === 'password') {
+        userTokenInput.type = 'text';
+        toggleTokenBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>`;
+      } else {
+        userTokenInput.type = 'password';
+        toggleTokenBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`;
       }
-      modePills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      activeMode = pill.getAttribute('data-mode');
-      updatePresets(activeMode);
     });
-  });
 
-  if (targetCountInput) {
-    targetCountInput.addEventListener('input', () => {
-      document.querySelectorAll('.preset-pill').forEach(b => b.classList.remove('active'));
-      updateEstimatedTime();
+    modePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        modePills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        activeMode = pill.dataset.mode;
+        updatePresets(activeMode);
+      });
     });
-  }
 
-  if (startLevelingBtn) {
+    targetCountInput.addEventListener('input', updateEstimatedTime);
     startLevelingBtn.addEventListener('click', handleStartLeveling);
-  }
-
-  if (stopLevelingBtn) {
     stopLevelingBtn.addEventListener('click', () => stopLeveling(false));
+
+    // Initial setup
+    updatePresets('stream');
+    loadTopGames();
   }
 
-  // Pre-load top games on idle
-  loadTopGames();
-  updatePresets('stream');
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();

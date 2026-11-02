@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>M9MQ · Discord Cloud Leveler | تلفيل شارات ديسكورد</title>
-  <meta name="description" content="منصة تلفيل شارات وساعات ديسكورد السحابية للهواتف - حقوق m9mq. أدخل توكن حسابك واضغط زر تلفيل مباشرة من هاتفك بمعدل 2000x Turbo.">
+  <meta name="description" content="منصة تلفيل شارات وساعات ديسكورد السحابية للهواتف - حقوق m9mq. أدخل توكن حسابك واختر الشارة وابدأ التلفيل مباشرة بحماية ضد الباند وسرعة 2000x Turbo.">
   <meta name="author" content="m9mq">
   <meta name="theme-color" content="#060608">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,7 +12,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="M9MQ · Discord Mobile Cloud Leveler">
-  <meta property="og:description" content="تلفيل مباشر لشارات بروفايل ديسكورد وساعات البث والألعاب من الهاتف مباشرة بدون تحميل أي برامج.">
+  <meta property="og:description" content="تلفيل مباشر لشارات بروفايل ديسكورد وساعات البث والألعاب وتنوع الألعاب مع حماية متقدمة ضد الباند.">
   <meta property="og:image" content="assets/logo.png">
 
   <!-- Favicon -->
@@ -28,7 +28,7 @@
 </head>
 <body>
 
-  <!-- Fluid Dark Background with ribbon wallpaper -->
+  <!-- Fluid Dark Ambient Background with Wallpaper -->
   <div class="ambient-bg">
     <div class="ambient-wallpaper"></div>
     <div class="ambient-mesh"></div>
@@ -36,39 +36,38 @@
     <div class="ambient-glow glow-bottom"></div>
   </div>
 
-  <!-- Floating Glass Header Bar -->
+  <!-- Floating Glass Navigation Bar -->
   <header class="floating-nav-bar">
     <div class="nav-content">
       <div class="nav-brand">
-        <img src="assets/logo.png" alt="m logo" class="brand-logo-img">
+        <img src="assets/logo.png" alt="m9mq logo" class="brand-logo-img">
         <div class="brand-meta">
           <span class="brand-title">M9MQ</span>
           <span class="brand-sub">CLOUD LEVELER</span>
         </div>
       </div>
-      <div class="nav-badge">
-        <span class="status-dot"></span>
-        <span class="nav-status-text">2000x Turbo</span>
+      <div class="nav-badges-group">
+        <div class="nav-pill nav-shield-pill">
+          <svg class="shield-icon-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>حماية ضد الباند</span>
+        </div>
+        <div class="nav-pill nav-speed-pill">
+          <span class="status-dot"></span>
+          <span class="nav-status-text">2000x Turbo</span>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Main Mobile App Canvas -->
+  <!-- Main Mobile App Canvas (Direct to Controls, Zero Clutter) -->
   <main class="app-container">
-
-    <!-- Hero Card: Clean & Direct -->
-    <div class="glass-card hero-glass">
-      <div class="hero-logo-box">
-        <img src="assets/logo.png" alt="m logo" class="hero-logo-large">
-      </div>
-      <h1 class="app-headline">تلفيل شارات ديسكورد المباشر</h1>
-      <p class="app-subheadline">مخصص للهواتف بدون تحميل برامج · ضع التوكن واختر العدد وابدأ التلفيل فوراً</p>
-    </div>
 
     <!-- Main Interactive Leveling Card -->
     <div class="glass-card main-level-card">
 
-      <!-- Step 1: Token Input -->
+      <!-- Step 1: Token Input Field -->
       <div class="field-box">
         <div class="field-header">
           <label for="userToken" class="field-label">
@@ -92,61 +91,65 @@
         </div>
       </div>
 
-      <!-- Step 2: Leveling Mode Selector (Floating Pills) -->
+      <!-- Step 2: Category Mode Selector with Official Discord Icons -->
       <div class="field-box">
         <label class="field-label">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          <span>اختر ما تريد تلفيله:</span>
+          <span>اختر مسار التلفيل والشارة:</span>
         </label>
         <div class="mode-pills-grid">
           <button type="button" class="mode-pill active" data-mode="stream">
             <span class="mode-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M8 21h8m-4-4v4"></path>
-                <polygon points="10 8 16 11 10 14" fill="currentColor"></polygon>
-              </svg>
+              <img src="assets/badges/streaming/phenomenon.svg" alt="Streaming" class="mode-badge-img">
             </span>
             <div class="mode-info">
-              <strong>شارة الستريمر</strong>
-              <small>بث مباشر 2000x Turbo</small>
+              <strong>شارات الستريمر</strong>
+              <small>Streaming Badges (10 مستويات)</small>
             </div>
           </button>
-          <button type="button" class="mode-pill" data-mode="playtime">
+          <button type="button" class="mode-pill" data-mode="gametime">
             <span class="mode-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="6" width="20" height="12" rx="6"></rect>
-                <path d="M6 12h4m-2-2v4m7-2h.01m3 0h.01"></path>
-              </svg>
+              <img src="assets/badges/gametime/eternal.svg" alt="Game Time" class="mode-badge-img">
             </span>
             <div class="mode-info">
               <strong>ساعات الألعاب</strong>
-              <small>ساعات نشاط حتى 10k</small>
+              <small>Game Time (حتى 5,000h+)</small>
             </div>
           </button>
           <button type="button" class="mode-pill" data-mode="variety">
             <span class="mode-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                <path d="M4 4h16v6a7 7 0 0 1-14 0V4z"></path>
-                <path d="M12 17v4m-4 0h8"></path>
-              </svg>
+              <img src="assets/badges/variety/universalist.svg" alt="Variety" class="mode-badge-img">
             </span>
             <div class="mode-info">
-              <strong>شارات التنوع</strong>
-              <small>تسجيل 120+ لعبة</small>
+              <strong>تنوع الألعاب</strong>
+              <small>Game Variety (100+ لعبة)</small>
             </div>
           </button>
         </div>
       </div>
 
-      <!-- Step 3: Target Quantity Input & Quick Preset Pills -->
+      <!-- Step 3: Interactive Official Badges Showcase & Tier Selector -->
+      <div class="field-box">
+        <div class="field-header">
+          <label class="field-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span id="tierGalleryTitle">شارات الديسكورد الرسمية (اختر الشارة للوصول لها):</span>
+          </label>
+          <span class="gallery-hint">المس الشارة لتحديدها</span>
+        </div>
+
+        <!-- Horizontal Scrollable Badges Carousel -->
+        <div class="badges-carousel" id="badgesCarousel">
+          <!-- Dynamically populated by app.js with official Discord SVGs -->
+        </div>
+      </div>
+
+      <!-- Step 4: Target Quantity & Quick Presets -->
       <div class="field-box">
         <div class="field-header">
           <label for="targetCountInput" class="field-label">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span id="quantityLabel">العدد / الساعات المطلوبة:</span>
+            <span id="quantityLabel">الساعات المستهدفة:</span>
           </label>
           <span id="calcTimeEst" class="est-tag">1.8 ثانية للتلفيل</span>
         </div>
@@ -156,28 +159,24 @@
           <span id="unitTag" class="unit-pill">ساعة</span>
         </div>
 
-        <!-- Quick Presets for Instant Selection -->
+        <!-- Quick Presets -->
         <div class="preset-pills-row" id="presetsRow">
-          <button type="button" class="preset-pill" data-val="20">20 ساعة</button>
-          <button type="button" class="preset-pill" data-val="75">75 ساعة</button>
-          <button type="button" class="preset-pill" data-val="300">300 ساعة</button>
-          <button type="button" class="preset-pill" data-val="1000">1,000 ساعة</button>
-          <button type="button" class="preset-pill active" data-val="5000">5,000h (أعلى شارة)</button>
+          <!-- Populated by app.js -->
         </div>
       </div>
 
-      <!-- Optional Voice Room Field (Collapsible) -->
+      <!-- Optional Voice Room Field (For Streaming mode) -->
       <div class="field-box" id="roomFieldBox">
         <label for="voiceRoomInput" class="field-label">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-          <span>معرف الروم الصوتي أو الرابط (افتراضي جاهز):</span>
+          <span>معرف الروم الصوتي أو الرابط (افتراضي مجهز):</span>
         </label>
         <div class="input-glass-pill">
           <input type="text" id="voiceRoomInput" class="modern-input" value="1559321217847271594" placeholder="1559321217847271594">
         </div>
       </div>
 
-      <!-- Action Button: Big, Tactile, Glowing -->
+      <!-- Start Action Button -->
       <div class="action-wrap">
         <button type="button" id="startLevelingBtn" class="btn-glow-primary">
           <svg class="btn-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -189,20 +188,36 @@
 
     </div>
 
-    <!-- Floating Live Progress HUD (Expands during Leveling) -->
+    <!-- Floating Live HUD Card (Active during operation) -->
     <div id="liveProgressDock" class="glass-card live-hud-card hidden">
       <div class="hud-top">
         <div class="hud-indicator">
           <span class="pulse-live-dot"></span>
           <span id="hudStatusTitle">جاري الاتصال بسيرفر الديسكورد...</span>
         </div>
-        <span class="hud-speed-badge">2000x Turbo</span>
+        <div class="hud-badges-row">
+          <span class="hud-shield-tag">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Anti-Ban Active
+          </span>
+          <span class="hud-speed-badge">2000x Turbo</span>
+        </div>
+      </div>
+
+      <!-- Active Target Badge Display -->
+      <div class="active-badge-preview-card">
+        <img id="activeTargetBadgeImg" src="assets/badges/streaming/phenomenon.svg" alt="Target Badge" class="active-badge-img">
+        <div class="active-badge-meta">
+          <span class="badge-sub-label">الشارة الجاري تلفيلها:</span>
+          <strong id="activeTargetBadgeName">الظاهرة الخارقة (Phenomenon)</strong>
+          <small id="activeTargetBadgeReq">5,000+ ساعة بث مباشر</small>
+        </div>
       </div>
 
       <!-- Progress Meter -->
       <div class="hud-meter-wrap">
         <div class="meter-labels">
-          <span id="meterSubLabel">التقدم نحو الهدف</span>
+          <span id="meterSubLabel">التقدم نحو الشارة المستهدفة</span>
           <span id="meterPercent" class="meter-pct">0%</span>
         </div>
         <div class="meter-track">
@@ -213,24 +228,24 @@
       <!-- Live Counters Grid -->
       <div class="hud-counters-grid">
         <div class="hud-counter-item">
-          <span class="counter-title">الساعات المسجلة</span>
+          <span class="counter-title">الرصيد المحسوب</span>
           <span id="liveLoggedHours" class="counter-num">0.00h</span>
         </div>
         <div class="hud-counter-item">
           <span class="counter-title">المستوى الحالي</span>
-          <span id="liveTierBadge" class="counter-highlight">Tier 1: Newcomer</span>
+          <span id="liveTierBadge" class="counter-highlight">المستوى 1</span>
         </div>
         <div class="hud-counter-item">
           <span class="counter-title">الوقت المنقضي</span>
           <span id="liveElapsedTime" class="counter-num">00:00:00</span>
         </div>
         <div class="hud-counter-item">
-          <span class="counter-title">حالة البث</span>
-          <span id="liveStreamState" class="counter-status">Go Live Active</span>
+          <span class="counter-title">حالة الاتصال</span>
+          <span id="liveStreamState" class="counter-status">متصل آمن</span>
         </div>
       </div>
 
-      <!-- Ticker Log -->
+      <!-- Terminal Log Glass -->
       <div class="hud-ticker-glass">
         <span id="tickerLogText" class="ticker-text">[GATEWAY] Initializing WebSocket handshake...</span>
       </div>
@@ -246,19 +261,79 @@
       </div>
     </div>
 
-    <!-- Simple Security & Guarantee Card -->
+    <!-- Anti-Ban Protection & Security Card -->
     <div class="glass-card security-glass">
-      <div class="sec-badge-row">
-        <div class="sec-pill">
-          <span class="sec-dot"></span>
-          <span>100% داخل هاتفك (Client-Side)</span>
+      <div class="sec-header">
+        <div class="sec-icon-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
         </div>
-        <div class="sec-pill">
-          <span class="sec-dot"></span>
-          <span>مشفر TLS 1.3 بدون تسجيل</span>
+        <div class="sec-title-box">
+          <strong class="sec-title">نظام الحماية المتقدم ضد الباند (Anti-Ban Engine)</strong>
+          <span class="sec-sub">مشفر بأعلى معايير أمان التيليمتري وتفادي رصد الديسكورد</span>
         </div>
       </div>
-      <p class="sec-text">التوكن يُستخدم مباشرة من متصفحك للاتصال بخوادم ديسكورد الرسمية عبر الـ WebSocket وتيليمتري Science بدون حفظه على أي قاعدة بيانات.</p>
+
+      <div class="sec-grid">
+        <div class="sec-feature">
+          <span class="sec-check">✓</span>
+          <div class="sec-feature-text">
+            <strong>محاكاة بصمة عميل رسمية</strong>
+            <small>بصمة Discord Client مستقرة مع تحديث دوري لأرقام الـ Build</small>
+          </div>
+        </div>
+        <div class="sec-feature">
+          <span class="sec-check">✓</span>
+          <div class="sec-feature-text">
+            <strong>نبضات عشوائية بشرية (Jitter)</strong>
+            <small>تشتيت زمني عشوائي للنبضات لمنع الخوارزميات الآلية من الاشتباه</small>
+          </div>
+        </div>
+        <div class="sec-feature">
+          <span class="sec-check">✓</span>
+          <div class="sec-feature-text">
+            <strong>معالجة Rate Limit تلقائياً</strong>
+            <small>تراجع ذكي عند مواجهة قيود 429 لحماية الحساب من أي تقييد</small>
+          </div>
+        </div>
+        <div class="sec-feature">
+          <span class="sec-check">✓</span>
+          <div class="sec-feature-text">
+            <strong>صفر تخزين خارجي (Client-Side)</strong>
+            <small>التوكن يعمل بذاكرة المتصفح فقط ومحمي بتشفير TLS 1.3</small>
+          </div>
+        </div>
+      </div>
+    <!-- Dedicated Monetization & Ad Revenue Space (أرباح الإعلانات لحسابك) -->
+    <div class="glass-card ad-revenue-card" id="adRevenueBox">
+      <div class="ad-card-badge">
+        <span class="ad-tag">مساحة إعلانية / SPONSOR AD</span>
+        <span class="ad-earning-tag">عوائد الأرباح لحسابك</span>
+      </div>
+      <div class="ad-content-slot" id="monetizationSlot">
+        <!-- 
+          مساحة إعلانات مجهزة بالكامل:
+          يمكنك وضع كود شبكة الإعلانات الخاصة بك (Adsterra, Monetag, Google AdSense, A-Ads)
+          أو بنر توجيهي لمتجرك لتحقيق أرباح مباشرة 100% في محفظتك/حسابك
+        -->
+        <div class="ad-interactive-banner">
+          <div class="ad-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="ad-info-box">
+            <strong class="ad-title">متجر وخدمات ديسكورد الرسمية · M9MQ VIP</strong>
+            <p class="ad-desc">احصل على ترقيات شارات حصرية، وسيرفرات ديسكورد بأفضل الأسعار وحماية كاملة.</p>
+          </div>
+          <a href="https://discord.com/users/1318528650110304298" target="_blank" rel="noopener noreferrer" class="btn-ad-action">
+            <span>تواصل الآن</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ad-card-footer">
+        <span class="ad-hint">مساحة إعلانية مجهزة: اربط حساب Adsterra أو Google AdSense لجني الأرباح بالدولار مباشرة لحسابك</span>
+      </div>
     </div>
 
   </main>
@@ -267,10 +342,10 @@
   <footer class="floating-footer">
     <div class="footer-wrap">
       <div class="footer-brand-sig">
-        <img src="assets/logo.png" alt="m logo" class="footer-logo-mini">
+        <img src="assets/logo.png" alt="m9mq logo" class="footer-logo-mini">
         <span>M9MQ · ALL RIGHTS RESERVED © 2026</span>
       </div>
-      <span class="footer-dev">DEVELOPED BY <strong>m9mq</strong></span>
+      <span class="footer-dev">DEVELOPED BY <strong>m9mq</strong> · ID: 1318528650110304298</span>
     </div>
   </footer>
 
