@@ -576,7 +576,12 @@
     isLeveling = false;
     startLevelingBtn.disabled = false;
     startLevelingBtn.style.opacity = '1';
-    startLevelingBtn.innerHTML = '<span class="btn-icon-wrap">⚡</span><span class="btn-text">بدء التلفيل المباشر الآن</span>';
+    startLevelingBtn.innerHTML = `
+      <svg class="btn-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+      </svg>
+      <span class="btn-text">بدء التلفيل المباشر الآن</span>
+    `;
 
     if (gatewayWs) {
       try {
@@ -606,8 +611,14 @@
     targetVal = parseFloat(targetCountInput.value) || 5000;
     isLeveling = true;
     startLevelingBtn.disabled = true;
-    startLevelingBtn.style.opacity = '0.6';
-    startLevelingBtn.innerHTML = '<span class="btn-icon-wrap">⏳</span><span class="btn-text">جاري التلفيل الآن...</span>';
+    startLevelingBtn.style.opacity = '0.7';
+    startLevelingBtn.innerHTML = `
+      <svg class="btn-icon-svg spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+        <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+      </svg>
+      <span class="btn-text">جاري التلفيل الآن...</span>
+    `;
 
     // Show HUD & scroll to it
     liveProgressDock.classList.remove('hidden');

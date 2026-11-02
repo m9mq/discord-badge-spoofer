@@ -84,7 +84,10 @@
           </button>
         </div>
         <div id="accountInfoPill" class="account-info-pill hidden">
-          <span class="acc-icon">👤</span>
+          <svg class="acc-icon-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
           <span id="accountUserDisplay">الحساب: مجهول</span>
         </div>
       </div>
@@ -97,21 +100,39 @@
         </label>
         <div class="mode-pills-grid">
           <button type="button" class="mode-pill active" data-mode="stream">
-            <span class="mode-icon">🚀</span>
+            <span class="mode-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M8 21h8m-4-4v4"></path>
+                <polygon points="10 8 16 11 10 14" fill="currentColor"></polygon>
+              </svg>
+            </span>
             <div class="mode-info">
               <strong>شارة الستريمر</strong>
               <small>بث مباشر 2000x Turbo</small>
             </div>
           </button>
           <button type="button" class="mode-pill" data-mode="playtime">
-            <span class="mode-icon">🎮</span>
+            <span class="mode-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="6"></rect>
+                <path d="M6 12h4m-2-2v4m7-2h.01m3 0h.01"></path>
+              </svg>
+            </span>
             <div class="mode-info">
               <strong>ساعات الألعاب</strong>
               <small>ساعات نشاط حتى 10k</small>
             </div>
           </button>
           <button type="button" class="mode-pill" data-mode="variety">
-            <span class="mode-icon">🏆</span>
+            <span class="mode-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                <path d="M4 4h16v6a7 7 0 0 1-14 0V4z"></path>
+                <path d="M12 17v4m-4 0h8"></path>
+              </svg>
+            </span>
             <div class="mode-info">
               <strong>شارات التنوع</strong>
               <small>تسجيل 120+ لعبة</small>
@@ -159,7 +180,9 @@
       <!-- Action Button: Big, Tactile, Glowing -->
       <div class="action-wrap">
         <button type="button" id="startLevelingBtn" class="btn-glow-primary">
-          <span class="btn-icon-wrap">⚡</span>
+          <svg class="btn-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
           <span class="btn-text">بدء التلفيل المباشر الآن</span>
         </button>
       </div>
@@ -215,7 +238,10 @@
       <!-- Stop Button -->
       <div class="hud-action-row">
         <button type="button" id="stopLevelingBtn" class="btn-danger-glass">
-          <span>🛑 إيقاف التلفيل وحفظ التقدم</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="5" y="5" width="14" height="14" rx="2"></rect>
+          </svg>
+          <span>إيقاف التلفيل وحفظ التقدم</span>
         </button>
       </div>
     </div>
