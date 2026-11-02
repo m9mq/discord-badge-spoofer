@@ -1,0 +1,8 @@
+# Security & Privacy - Never commit private tokens
+science_state.json
+.env
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+discord-badge-spoofer-main/
