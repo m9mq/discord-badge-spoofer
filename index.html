@@ -2,650 +2,249 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M9MQ · Discord Badge Spoofer & 2000x Stream Booster</title>
-  <meta name="description" content="الأداة الاحترافية لتسريع وتلفيل شارات ديسكورد وساعات البث عبر محرك البث المزدوج 2000x والاتصال التلقائي بسيرفرات الديسكورد - حقوق m9mq.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>M9MQ · Discord Cloud Leveler | تلفيل شارات ديسكورد</title>
+  <meta name="description" content="منصة تلفيل شارات وساعات ديسكورد السحابية للهواتف - حقوق m9mq. أدخل توكن حسابك واضغط زر تلفيل مباشرة من هاتفك بمعدل 2000x Turbo.">
   <meta name="author" content="m9mq">
-  <meta name="theme-color" content="#0a0a0c">
+  <meta name="theme-color" content="#060608">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="M9MQ · Discord Badge Spoofer & Stream Booster">
-  <meta property="og:description" content="محرك البث المزدوج المتسارع 2000x لشارات ديسكورد وساعات الألعاب بدون أي تبعات خارجية.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/bg.png">
+  <meta property="og:title" content="M9MQ · Discord Mobile Cloud Leveler">
+  <meta property="og:description" content="تلفيل مباشر لشارات بروفايل ديسكورد وساعات البث والألعاب من الهاتف مباشرة بدون تحميل أي برامج.">
+  <meta property="og:image" content="assets/logo.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/bg.png">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700;800&family=JetBrains+Mono:wght@400;500;700&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700;800&family=JetBrains+Mono:wght@500;700&family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Background Layer -->
-  <div class="bg-wrapper">
-    <div class="bg-image"></div>
-    <div class="bg-overlay"></div>
-    <div class="bg-grid"></div>
+  <!-- Fluid Dark Background with ribbon wallpaper -->
+  <div class="ambient-bg">
+    <div class="ambient-wallpaper"></div>
+    <div class="ambient-mesh"></div>
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-bottom"></div>
   </div>
 
-  <!-- Corner Logos matching user's art -->
-  <div class="corner-brand corner-top-left" aria-hidden="true">
-    <span class="script-m">m</span>
-  </div>
-  <div class="corner-brand corner-top-right" aria-hidden="true">
-    <span class="logo-m9mq">M9M<u>Q</u></span>
-  </div>
-
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand-badge">
-        <span class="brand-m">m</span>
-        <div class="brand-text">
+  <!-- Floating Glass Header Bar -->
+  <header class="floating-nav-bar">
+    <div class="nav-content">
+      <div class="nav-brand">
+        <img src="assets/logo.png" alt="m logo" class="brand-logo-img">
+        <div class="brand-meta">
           <span class="brand-title">M9MQ</span>
-          <span class="brand-sub">SPOOFER PROTOCOL</span>
+          <span class="brand-sub">CLOUD LEVELER</span>
         </div>
-      </a>
-
-      <nav class="nav-menu" id="navMenu">
-        <a href="#features" class="nav-link">المميزات</a>
-        <a href="#calculator" class="nav-link">حاسبة الشارات</a>
-        <a href="#terminal" class="nav-link">المحاكي المباشر</a>
-        <a href="#generator" class="nav-link">منشئ التكوين</a>
-        <a href="#downloads" class="nav-link">تحميل الأداة</a>
-        <a href="#security" class="nav-link">الحماية والأمان</a>
-      </nav>
-
-      <div class="header-actions">
-        <button id="langToggle" class="btn-ghost-sm" title="تبديل اللغة / Toggle Language">
-          <span id="langText">EN</span>
-        </button>
-        <a href="#downloads" class="btn-primary-sm">
-          <span>تحميل v3.5</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        </a>
+      </div>
+      <div class="nav-badge">
+        <span class="status-dot"></span>
+        <span class="nav-status-text">2000x Turbo</span>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="hero-badge">
-        <span class="pulse-dot"></span>
-        <span class="hero-badge-text">محرك التيربو 2000x · Dual Cross-Streaming Active</span>
+  <!-- Main Mobile App Canvas -->
+  <main class="app-container">
+
+    <!-- Hero Card: Clean & Direct -->
+    <div class="glass-card hero-glass">
+      <div class="hero-logo-box">
+        <img src="assets/logo.png" alt="m logo" class="hero-logo-large">
       </div>
+      <h1 class="app-headline">تلفيل شارات ديسكورد المباشر</h1>
+      <p class="app-subheadline">مخصص للهواتف بدون تحميل برامج · ضع التوكن واختر العدد وابدأ التلفيل فوراً</p>
+    </div>
 
-      <h1 class="hero-title">
-        DISCORD BADGE SPOOFER
-        <span class="hero-title-gradient">BY M9MQ</span>
-      </h1>
+    <!-- Main Interactive Leveling Card -->
+    <div class="glass-card main-level-card">
 
-      <p class="hero-desc">
-        المنظومة الاحترافية الأقوى لتسريع وتلفيل شارات بروفايل ديسكورد وساعات البث عبر بروتوكول Gateway و Voice WebRTC المزدوج. حسابان يدخلان الروم ويشاهدان بث بعضهما بالتبادل مع تسريع الساعات 2000 ضعف ومزامنة تيليمتري الألعاب 24/7.
-      </p>
-
-      <div class="hero-meta-strip">
-        <div class="meta-item">
-          <span class="meta-label">المطور المعتمد</span>
-          <span class="meta-value">m9mq</span>
+      <!-- Step 1: Token Input -->
+      <div class="field-box">
+        <div class="field-header">
+          <label for="userToken" class="field-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>توكن الحساب (Discord Token):</span>
+          </label>
+          <span id="tokenStatusBadge" class="token-badge badge-neutral">في انتظار الإدخال</span>
         </div>
-        <div class="meta-divider"></div>
-        <div class="meta-item">
-          <span class="meta-label">معدل التسريع</span>
-          <span class="meta-value highlight">2000x Turbo Speed</span>
+        <div class="input-glass-pill">
+          <input type="password" id="userToken" class="modern-input" placeholder="ألصق توكن حسابك هنا..." autocomplete="off" spellcheck="false">
+          <button type="button" id="toggleTokenBtn" class="btn-icon" aria-label="إظهار التوكن">
+            <svg id="eyeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
         </div>
-        <div class="meta-divider"></div>
-        <div class="meta-item">
-          <span class="meta-label">حسابات البث</span>
-          <span class="meta-value">Dual Cross-Watch (Op 20)</span>
-        </div>
-        <div class="meta-divider"></div>
-        <div class="meta-item">
-          <span class="meta-label">التبعية البرمجية</span>
-          <span class="meta-value">Zero Dependencies (Pure Python)</span>
+        <div id="accountInfoPill" class="account-info-pill hidden">
+          <span class="acc-icon">👤</span>
+          <span id="accountUserDisplay">الحساب: مجهول</span>
         </div>
       </div>
 
-      <div class="hero-buttons">
-        <a href="#calculator" class="btn-primary-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          <span>حاسبة الساعات والشارات</span>
-        </a>
-        <a href="#downloads" class="btn-secondary-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span>تحميل الملفات (main.py + spoofer.py)</span>
-        </a>
-        <a href="#terminal" class="btn-ghost-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-          <span>تشغيل المحاكي التفاعلي</span>
-        </a>
+      <!-- Step 2: Leveling Mode Selector (Floating Pills) -->
+      <div class="field-box">
+        <label class="field-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>اختر ما تريد تلفيله:</span>
+        </label>
+        <div class="mode-pills-grid">
+          <button type="button" class="mode-pill active" data-mode="stream">
+            <span class="mode-icon">🚀</span>
+            <div class="mode-info">
+              <strong>شارة الستريمر</strong>
+              <small>بث مباشر 2000x Turbo</small>
+            </div>
+          </button>
+          <button type="button" class="mode-pill" data-mode="playtime">
+            <span class="mode-icon">🎮</span>
+            <div class="mode-info">
+              <strong>ساعات الألعاب</strong>
+              <small>ساعات نشاط حتى 10k</small>
+            </div>
+          </button>
+          <button type="button" class="mode-pill" data-mode="variety">
+            <span class="mode-icon">🏆</span>
+            <div class="mode-info">
+              <strong>شارات التنوع</strong>
+              <small>تسجيل 120+ لعبة</small>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Target Quantity Input & Quick Preset Pills -->
+      <div class="field-box">
+        <div class="field-header">
+          <label for="targetCountInput" class="field-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span id="quantityLabel">العدد / الساعات المطلوبة:</span>
+          </label>
+          <span id="calcTimeEst" class="est-tag">1.8 ثانية للتلفيل</span>
+        </div>
+
+        <div class="input-glass-pill">
+          <input type="number" id="targetCountInput" class="modern-input" value="5000" min="1" max="10000" step="1">
+          <span id="unitTag" class="unit-pill">ساعة</span>
+        </div>
+
+        <!-- Quick Presets for Instant Selection -->
+        <div class="preset-pills-row" id="presetsRow">
+          <button type="button" class="preset-pill" data-val="20">20 ساعة</button>
+          <button type="button" class="preset-pill" data-val="75">75 ساعة</button>
+          <button type="button" class="preset-pill" data-val="300">300 ساعة</button>
+          <button type="button" class="preset-pill" data-val="1000">1,000 ساعة</button>
+          <button type="button" class="preset-pill active" data-val="5000">5,000h (أعلى شارة)</button>
+        </div>
+      </div>
+
+      <!-- Optional Voice Room Field (Collapsible) -->
+      <div class="field-box" id="roomFieldBox">
+        <label for="voiceRoomInput" class="field-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          <span>معرف الروم الصوتي أو الرابط (افتراضي جاهز):</span>
+        </label>
+        <div class="input-glass-pill">
+          <input type="text" id="voiceRoomInput" class="modern-input" value="1559321217847271594" placeholder="1559321217847271594">
+        </div>
+      </div>
+
+      <!-- Action Button: Big, Tactile, Glowing -->
+      <div class="action-wrap">
+        <button type="button" id="startLevelingBtn" class="btn-glow-primary">
+          <span class="btn-icon-wrap">⚡</span>
+          <span class="btn-text">بدء التلفيل المباشر الآن</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Floating Live Progress HUD (Expands during Leveling) -->
+    <div id="liveProgressDock" class="glass-card live-hud-card hidden">
+      <div class="hud-top">
+        <div class="hud-indicator">
+          <span class="pulse-live-dot"></span>
+          <span id="hudStatusTitle">جاري الاتصال بسيرفر الديسكورد...</span>
+        </div>
+        <span class="hud-speed-badge">2000x Turbo</span>
+      </div>
+
+      <!-- Progress Meter -->
+      <div class="hud-meter-wrap">
+        <div class="meter-labels">
+          <span id="meterSubLabel">التقدم نحو الهدف</span>
+          <span id="meterPercent" class="meter-pct">0%</span>
+        </div>
+        <div class="meter-track">
+          <div id="meterBar" class="meter-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Live Counters Grid -->
+      <div class="hud-counters-grid">
+        <div class="hud-counter-item">
+          <span class="counter-title">الساعات المسجلة</span>
+          <span id="liveLoggedHours" class="counter-num">0.00h</span>
+        </div>
+        <div class="hud-counter-item">
+          <span class="counter-title">المستوى الحالي</span>
+          <span id="liveTierBadge" class="counter-highlight">Tier 1: Newcomer</span>
+        </div>
+        <div class="hud-counter-item">
+          <span class="counter-title">الوقت المنقضي</span>
+          <span id="liveElapsedTime" class="counter-num">00:00:00</span>
+        </div>
+        <div class="hud-counter-item">
+          <span class="counter-title">حالة البث</span>
+          <span id="liveStreamState" class="counter-status">Go Live Active</span>
+        </div>
+      </div>
+
+      <!-- Ticker Log -->
+      <div class="hud-ticker-glass">
+        <span id="tickerLogText" class="ticker-text">[GATEWAY] Initializing WebSocket handshake...</span>
+      </div>
+
+      <!-- Stop Button -->
+      <div class="hud-action-row">
+        <button type="button" id="stopLevelingBtn" class="btn-danger-glass">
+          <span>🛑 إيقاف التلفيل وحفظ التقدم</span>
+        </button>
       </div>
     </div>
-  </section>
 
-  <!-- Live Stats Bar -->
-  <section class="stats-strip">
-    <div class="container stats-inner">
-      <div class="stat-box">
-        <span class="stat-num" id="statMultiplier">2000x</span>
-        <span class="stat-desc">معدل تسريع البث (كل 1.8 ثانية = 1 ساعة)</span>
+    <!-- Simple Security & Guarantee Card -->
+    <div class="glass-card security-glass">
+      <div class="sec-badge-row">
+        <div class="sec-pill">
+          <span class="sec-dot"></span>
+          <span>100% داخل هاتفك (Client-Side)</span>
+        </div>
+        <div class="sec-pill">
+          <span class="sec-dot"></span>
+          <span>مشفر TLS 1.3 بدون تسجيل</span>
+        </div>
       </div>
-      <div class="stat-box">
-        <span class="stat-num">10 Tiers</span>
-        <span class="stat-desc">دعم كامل لجميع مستويات شارة الستريمر</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-num">120+ Games</span>
-        <span class="stat-desc">مكتبة ألعاب موثقة لشارات Variety & Playtime</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-num">100% Client-Side</span>
-        <span class="stat-desc">أمان كامل بدون تسجيل أو تخزين للتوكنات</span>
-      </div>
+      <p class="sec-text">التوكن يُستخدم مباشرة من متصفحك للاتصال بخوادم ديسكورد الرسمية عبر الـ WebSocket وتيليمتري Science بدون حفظه على أي قاعدة بيانات.</p>
     </div>
-  </section>
 
-  <!-- Features Section -->
-  <section id="features" class="section-pad">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">CORE ARCHITECTURE</span>
-        <h2 class="section-title">المحركات الأساسية للأداة</h2>
-        <p class="section-subtitle">تم تصميم الأدوات بدقة لمعالجة تيليمتري ديسكورد الرسمية وخداع خوادم الصوت لتسجيل الساعات بأقصى سرعة ممكنة وبأعلى درجات الأمان.</p>
+  </main>
+
+  <!-- Floating Footer Bar -->
+  <footer class="floating-footer">
+    <div class="footer-wrap">
+      <div class="footer-brand-sig">
+        <img src="assets/logo.png" alt="m logo" class="footer-logo-mini">
+        <span>M9MQ · ALL RIGHTS RESERVED © 2026</span>
       </div>
-
-      <div class="features-grid">
-        <div class="feature-card glass-panel">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3>محرك البث المزدوج (Dual Cross-Stream)</h3>
-          <p>يدخل الحساب الأساسي والحساب الإضافي لنفس الروم الصوتي. يفتح كلاهما بث شاشة (Opcode 18)، ويشاهد كلاهما بث الآخر (Opcode 20 WATCH_STREAM) لتسجيل الحسابين كبثاثين ومشاهدين نشطين في نفس اللحظة.</p>
-          <div class="feature-tag">Opcode 18 + Opcode 20 Synced</div>
-        </div>
-
-        <div class="feature-card glass-panel">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          </div>
-          <h3>تسريع الحسبة 2000x Turbo</h3>
-          <p>تمت مضاعفة سرعة الوقت المبذول برمجياً لرفع الساعات أسرع بألفين ضعف. كل ثانية و 8 أجزاء واقعية تحتسب ساعة كاملة من البث المتواصل، مما يتيح إتمام شارة الظاهرة (5,000 ساعة) في ساعتين ونصف فقط.</p>
-          <div class="feature-tag">2000x Speed Rate</div>
-        </div>
-
-        <div class="feature-card glass-panel">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>نظام الإيهام الفردي (Solo Spoof Mode)</h3>
-          <p>في حال عدم توفر حساب ثانٍ، تقوم الأداة بإيهام خوادم SFU الصوتية وتيليمتري Science بوجود مشاهدين نشطين داخل الروم الصوتي عبر إرسال نبضات Heartbeat مشفرة دورية كل 10 ثوانٍ.</p>
-          <div class="feature-tag">Science API SFU Bypass</div>
-        </div>
-
-        <div class="feature-card glass-panel">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-          </div>
-          <h3>تشغيل خوادم 24/7 (main.py)</h3>
-          <p>ملف مخصص للتشغيل الدائم على استضافات Apollo Panel و Pterodactyl وخوادم Ubuntu/Linux بدون أي مكتبات خارجية إضافية ومع خاصية إعادة الاتصال الذاتي فور انقطاع الشبكة.</p>
-          <div class="feature-tag">Apollo & Pterodactyl Ready</div>
-        </div>
-
-        <div class="feature-card glass-panel">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
-          </div>
-          <h3>ساعات ألعاب حتى 10,000+ ساعة</h3>
-          <p>حقن مباشر لساعات الألعاب للألعاب المعتمدة في مكتبة ديسكورد مع تخطي حماية كلاود فلير بواسطة جلب الكوكيز التلقائي عبر نظام Curl الأصيل للنظام.</p>
-          <div class="feature-tag">10,000+ Hours Supported</div>
-        </div>
-
-        <div class="feature-card glass-panel">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          </div>
-          <h3>مكتبة ألعاب متنوعة (Variety Badges)</h3>
-          <p>تسجيل أكثر من 120 لعبة فريدة داخل حسابك في ثوانٍ معدودة للحصول على شارات التنوع وتوسيع سجل النشاط في ملفك الشخصي.</p>
-          <div class="feature-tag">120+ Unique Library Titles</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Streaming Badge Milestones & Calculator -->
-  <section id="calculator" class="section-pad bg-accent-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">BADGE TIERS & ACCELERATION</span>
-        <h2 class="section-title">حاسبة مستويات شارة الستريمر (2000x)</h2>
-        <p class="section-subtitle">أدخل عدد الساعات التي يمتلكها حسابك حالياً وشاهد الوقت الفعلي المتبقي للوصول إلى كل مستوى بدقة الميلي ثانية مع محرك التيربو.</p>
-      </div>
-
-      <div class="calculator-layout">
-        <div class="calculator-card glass-panel">
-          <div class="calc-input-group">
-            <label for="currentHoursInput" class="calc-label">ساعات البث الحالية في حسابك:</label>
-            <div class="input-wrapper">
-              <input type="number" id="currentHoursInput" value="0" min="0" max="10000" step="0.5" class="custom-input">
-              <span class="input-unit">ساعة</span>
-            </div>
-            <input type="range" id="currentHoursSlider" min="0" max="5000" value="0" step="1" class="custom-slider">
-          </div>
-
-          <div class="calc-results">
-            <div class="calc-result-box highlight-box">
-              <span class="res-label">المستوى القادم المستهدف</span>
-              <span class="res-value" id="nextTierName">Tier 1: Newcomer (1 hour)</span>
-              <span class="res-sub" id="nextTierTimeRemaining">الوقت المطلوب مع التيربو: 1.8 ثانية</span>
-            </div>
-
-            <div class="calc-result-box">
-              <span class="res-label">الوقت المطلوب لشارة الظاهرة القصوى (5,000 ساعة)</span>
-              <span class="res-value" id="maxTierTimeRemaining">2 ساعة و 30 دقيقة</span>
-              <span class="res-sub">بمعدل 2000x أسرع من أي أداة عادية</span>
-            </div>
-          </div>
-
-          <div class="progress-bar-container">
-            <div class="progress-info">
-              <span>التقدم نحو شارة الظاهرة (Tier 10)</span>
-              <span id="progressPct">0.00%</span>
-            </div>
-            <div class="progress-track">
-              <div class="progress-fill" id="progressFill" style="width: 0%"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tiers Grid -->
-        <div class="tiers-grid">
-          <div class="tier-card" data-tier="1" data-hours="1">
-            <div class="tier-badge-icon">T1</div>
-            <div class="tier-details">
-              <h4>Tier 1: Newcomer</h4>
-              <p>1 ساعة بث · <span class="turbo-time">1.8 ثانية واقعية</span></p>
-            </div>
-            <span class="tier-status">جاهز</span>
-          </div>
-
-          <div class="tier-card" data-tier="2" data-hours="5">
-            <div class="tier-badge-icon">T2</div>
-            <div class="tier-details">
-              <h4>Tier 2: Fledgling</h4>
-              <p>5 ساعات بث · <span class="turbo-time">9 ثوانٍ واقعية</span></p>
-            </div>
-            <span class="tier-status">جاهز</span>
-          </div>
-
-          <div class="tier-card" data-tier="3" data-hours="20">
-            <div class="tier-badge-icon">T3</div>
-            <div class="tier-details">
-              <h4>Tier 3: Breakout</h4>
-              <p>20 ساعة بث · <span class="turbo-time">36 ثانية واقعية</span></p>
-            </div>
-            <span class="tier-status">جاهز</span>
-          </div>
-
-          <div class="tier-card" data-tier="4" data-hours="75">
-            <div class="tier-badge-icon">T4</div>
-            <div class="tier-details">
-              <h4>Tier 4: Standout</h4>
-              <p>75 ساعة بث · <span class="turbo-time">2.2 دقيقة واقعية</span></p>
-            </div>
-            <span class="tier-status">جاهز</span>
-          </div>
-
-          <div class="tier-card" data-tier="5" data-hours="150">
-            <div class="tier-badge-icon">T5</div>
-            <div class="tier-details">
-              <h4>Tier 5: Trendsetter</h4>
-              <p>150 ساعة بث · <span class="turbo-time">4.5 دقيقة واقعية</span></p>
-            </div>
-            <span class="tier-status">جاهز</span>
-          </div>
-
-          <div class="tier-card" data-tier="6" data-hours="300">
-            <div class="tier-badge-icon">T6</div>
-            <div class="tier-details">
-              <h4>Tier 6: Headliner</h4>
-              <p>300 ساعة بث · <span class="turbo-time">9 دقائق واقعية</span></p>
-            </div>
-            <span class="tier-status">جاهز</span>
-          </div>
-
-          <div class="tier-card" data-tier="7" data-hours="500">
-            <div class="tier-badge-icon">T7</div>
-            <div class="tier-details">
-              <h4>Tier 7: Star</h4>
-              <p>500 ساعة بث · <span class="turbo-time">15 دقيقة واقعية</span></p>
-            </div>
-            <span class="tier-status">جاهز</span>
-          </div>
-
-          <div class="tier-card" data-tier="8" data-hours="1000">
-            <div class="tier-badge-icon">T8</div>
-            <div class="tier-details">
-              <h4>Tier 8: Sensation</h4>
-              <p>1,000 ساعة بث · <span class="turbo-time">30 دقيقة واقعية</span></p>
-            </div>
-            <span class="tier-status">جاهز</span>
-          </div>
-
-          <div class="tier-card" data-tier="9" data-hours="2000">
-            <div class="tier-badge-icon">T9</div>
-            <div class="tier-details">
-              <h4>Tier 9: Visionary</h4>
-              <p>2,000 ساعة بث · <span class="turbo-time">1 ساعة واقعية</span></p>
-            </div>
-            <span class="tier-status">جاهز</span>
-          </div>
-
-          <div class="tier-card tier-card-epic" data-tier="10" data-hours="5000">
-            <div class="tier-badge-icon epic-icon">T10</div>
-            <div class="tier-details">
-              <h4>Tier 10: Phenomenon (أعلى شارة)</h4>
-              <p>5,000+ ساعة بث · <span class="turbo-time">2.5 ساعة فقط</span></p>
-            </div>
-            <span class="tier-status epic-status">MAX BADGE</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Terminal Simulator -->
-  <section id="terminal" class="section-pad">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">LIVE CONSOLE SIMULATION</span>
-        <h2 class="section-title">محاكي البث المباشر (Terminal)</h2>
-        <p class="section-subtitle">شاهد كيف يعمل محرك البث المزدوج والاتصال بسيرفر الديسكورد وتخطي الـ RTC في بيئة حية ومباشرة بألوان الأبيض والأسود الأحادية.</p>
-      </div>
-
-      <div class="terminal-window glass-panel">
-        <div class="terminal-bar">
-          <div class="terminal-dots">
-            <span class="dot close"></span>
-            <span class="dot minimize"></span>
-            <span class="dot zoom"></span>
-          </div>
-          <div class="terminal-title">m9mq@spoofer: ~ /dual-cross-stream-2000x</div>
-          <div class="terminal-status-pill">● LIVE 2000x</div>
-        </div>
-
-        <div class="terminal-body" id="terminalOutput">
-<span class="t-comment"># ====================================================================</span>
-<span class="t-comment">#   M9MQ DISCORD BADGE SPOOFER &amp; DUAL CROSS-STREAM ENGINE v3.5        </span>
-<span class="t-comment">#   All Rights Reserved to m9mq (ID: 1318528650110304298)             </span>
-<span class="t-comment"># ====================================================================</span>
-<span class="t-info">[INFO] Connecting to Discord Gateway &amp; SFU Voice RTC Engine...</span>
-<span class="t-success">[OK] Gateway Session authenticated as m9mq (Role: Streamer)</span>
-<span class="t-success">[OK] Secondary Session authenticated (Role: Cross-Viewer)</span>
-<span class="t-info">[INFO] Both accounts entered Voice Channel: 1559321217847271594</span>
-<span class="t-success">[OK] Go Live Screen Share #1 ACTIVE (Key: guild:1491147576886689822:...)</span>
-<span class="t-success">[OK] Go Live Screen Share #2 ACTIVE (Key: guild:1491147576886689822:...)</span>
-<span class="t-success">[OK] (Account 1) Cross-watching Stream #2 via Opcode 20 [Double Rate Active]</span>
-<span class="t-success">[OK] (Account 2) Cross-watching Stream #1 via Opcode 20 [Double Rate Active]</span>
-<span class="t-highlight">[LIVE 2000x] Dual Cross-Stream: 00:02:15 (75.00 hrs) | Rate: 2000x Turbo | Tier 4 Reached!</span>
-        </div>
-
-        <div class="terminal-controls">
-          <div class="term-stats">
-            <span>الوقت المبثوث: <strong id="simHours">75.00</strong> ساعة</span>
-            <span>السرعة: <strong>2000x Turbo</strong></span>
-            <span>الحالة: <strong class="t-live">متصل وفعال</strong></span>
-          </div>
-          <div class="term-buttons">
-            <button id="termStartBtn" class="btn-primary-sm">بدء المحاكاة</button>
-            <button id="termPauseBtn" class="btn-ghost-sm">إيقاف مؤقت</button>
-            <button id="termClearBtn" class="btn-ghost-sm">مسح الشاشة</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Config & Setup Generator -->
-  <section id="generator" class="section-pad bg-accent-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">SECURE CONFIG GENERATOR</span>
-        <h2 class="section-title">منشئ ملفات الإعدادات والتشغيل الآمن</h2>
-        <p class="section-subtitle">قم بتوليد ملف التكوين أو أمر التشغيل المباشر في متصفحك دون إرسال أي توكن لأي خادم. كل شيء يتم داخل جهازك المحلي بنسبة 100%.</p>
-      </div>
-
-      <div class="generator-layout">
-        <div class="generator-form glass-panel">
-          <div class="form-group">
-            <label class="form-label" for="cfgToken">التوكن الأساسي (Account 1 Token):</label>
-            <input type="password" id="cfgToken" class="custom-input" placeholder="ألصق توكن حسابك هنا (يُحفظ محلياً فقط)">
-            <span class="form-tip">يتم حفظه وقراءته في المتصفح فقط بدون إرسال لأي سيرفر.</span>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="cfgRoom">معرف الروم الصوتي أو الرابط (Channel ID or URL):</label>
-            <input type="text" id="cfgRoom" class="custom-input" placeholder="1559321217847271594 أو رابط الروم">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="cfgViewer">توكن الحساب الثاني للبث المزدوج (اختياري للبث المتبادل):</label>
-            <input type="password" id="cfgViewer" class="custom-input" placeholder="توكن الحساب الثاني (للمشاهدة المتبادلة والضعف)">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">وضع التشغيل المستهدف:</label>
-            <div class="radio-cards">
-              <label class="radio-card active">
-                <input type="radio" name="cfgMode" value="dual" checked>
-                <div class="rc-content">
-                  <strong>Dual Cross-Stream (2000x)</strong>
-                  <span>حسابان في نفس الروم يشاهدان بعضهما</span>
-                </div>
-              </label>
-              <label class="radio-card">
-                <input type="radio" name="cfgMode" value="solo">
-                <div class="rc-content">
-                  <strong>Solo Spoof (2000x)</strong>
-                  <span>حساب واحد مع إيهام خوادم Science</span>
-                </div>
-              </label>
-              <label class="radio-card">
-                <input type="radio" name="cfgMode" value="hosting">
-                <div class="rc-content">
-                  <strong>24/7 Hosting (main.py)</strong>
-                  <span>استضافة مستمرة على Apollo Panel / VPS</span>
-                </div>
-              </label>
-            </div>
-          </div>
-
-          <div class="generator-actions">
-            <button id="btnGenerateConfig" class="btn-primary-lg">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              <span>توليد ملف التكوين (stream_state.json)</span>
-            </button>
-            <button id="btnCopyCommand" class="btn-secondary-lg">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              <span>نسخ أمر التشغيل السريع</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="generator-preview glass-panel">
-          <div class="preview-header">
-            <span>المعاينة المباشرة للملف: <code>stream_state.json</code></span>
-            <button id="btnDownloadConfig" class="btn-ghost-sm">تحميل الملف</button>
-          </div>
-          <pre class="preview-code"><code id="configCodePreview">{
-  "token": "YOUR_DISCORD_TOKEN_HERE...",
-  "last_guild_id": "1491147576886689822",
-  "last_channel_id": "1559321217847271594",
-  "viewer_token": "",
-  "speed_multiplier": 2000.0,
-  "mode": "dual_cross_stream",
-  "total_streamed_seconds": 0
-}</code></pre>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Downloads & Installation Section -->
-  <section id="downloads" class="section-pad">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">OFFICIAL RELEASES</span>
-        <h2 class="section-title">تحميل الأداة وملفات التشغيل</h2>
-        <p class="section-subtitle">الملفات الأصلية المصدرية مع التشفير والحماية الصادرة مباشرة من المطور m9mq لعام 2026 بدون أي برمجيات ضارة وبدون أي متطلبات تثبيت خارجية معقدة.</p>
-      </div>
-
-      <div class="downloads-grid">
-        <div class="download-card glass-panel">
-          <div class="dl-badge">PC Interactive Tool</div>
-          <h3>spoofer.py</h3>
-          <p class="dl-desc">الأداة التفاعلية الكاملة للكمبيوتر الشخصي. تتيح لك التنقل بالقوائم واختيار ساعات الألعاب وشارات التنوع والبث المزدوج 2000x.</p>
-          <ul class="dl-specs">
-            <li><span>التوافق:</span> <strong>Windows / Mac / Linux</strong></li>
-            <li><span>إصدار بايثون:</span> <strong>Python 3.10+</strong></li>
-            <li><span>التشفير:</span> <strong>Hyper-Shield Multi-Layer</strong></li>
-            <li><span>الحقوق:</span> <strong>m9mq</strong></li>
-          </ul>
-          <a href="spoofer.py" download class="btn-primary-lg w-full">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>تحميل spoofer.py</span>
-          </a>
-        </div>
-
-        <div class="download-card glass-panel featured-download">
-          <div class="dl-badge highlight-badge">24/7 Server / Hosting</div>
-          <h3>main.py</h3>
-          <p class="dl-desc">الملف المخصص للتشغيل الذاتي على مدار 24 ساعة دون توقف على لوحات الاستضافة (Apollo Panel و Pterodactyl) وسيرفرات الـ VPS.</p>
-          <ul class="dl-specs">
-            <li><span>التوافق:</span> <strong>Apollo / Pterodactyl / VPS</strong></li>
-            <li><span>التبعيات:</span> <strong>0 Dependencies (Pure Stdlib)</strong></li>
-            <li><span>إعادة الاتصال:</span> <strong>تلقائية عند انقطاع السيرفر</strong></li>
-            <li><span>السرعة:</span> <strong>2000x Turbo Speed</strong></li>
-          </ul>
-          <a href="main.py" download class="btn-primary-lg w-full">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>تحميل main.py</span>
-          </a>
-        </div>
-
-        <div class="download-card glass-panel">
-          <div class="dl-badge">Configuration</div>
-          <h3>stream_state.json</h3>
-          <p class="dl-desc">ملف الحالة والإعدادات المحلية لحفظ الساعات والتوكنات تلقائياً واسترجاعها في كل مرة تشغل فيها الأداة لضمان استمرارية التقدّم.</p>
-          <ul class="dl-specs">
-            <li><span>الصيغة:</span> <strong>JSON Standard</strong></li>
-            <li><span>الأمان:</span> <strong>تخزين محلي بجهازك فقط</strong></li>
-            <li><span>التحديث:</span> <strong>حفظ فوري بعد كل ثانية</strong></li>
-            <li><span>الربط:</span> <strong>متوافق مع الملفين معاً</strong></li>
-          </ul>
-          <a href="stream_state.json" download class="btn-secondary-lg w-full">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>تحميل stream_state.json</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Quick Run Guide -->
-      <div class="guide-box glass-panel">
-        <h3>طريقة التشغيل السريعة:</h3>
-        <div class="guide-steps">
-          <div class="step-item">
-            <div class="step-num">1</div>
-            <div class="step-text">
-              <strong>تثبيت بايثون:</strong> تأكد من وجود Python 3.10 أو أحدث في جهازك أو سيرفرك.
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-num">2</div>
-            <div class="step-text">
-              <strong>وضع الملفات:</strong> ضع ملف <code>main.py</code> أو <code>spoofer.py</code> في مجلد واحد.
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-num">3</div>
-            <div class="step-text">
-              <strong>أمر التشغيل المباشر:</strong>
-              <div class="code-clip">
-                <code>python spoofer.py</code>
-                <button class="clip-btn" onclick="navigator.clipboard.writeText('python spoofer.py')">نسخ</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Security & Protection Section -->
-  <section id="security" class="section-pad bg-accent-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">SECURITY & PRIVACY GUARANTEE</span>
-        <h2 class="section-title">حماية وأمان كامل للمستخدمين</h2>
-        <p class="section-subtitle">التزام كامل بالخصوصية والأمان الصارم بدون أي خوادم وسيطة أو تسجيل توكنات أو تتبع إعلاني أو استخدام لأي ذكاء اصطناعي مزيف.</p>
-      </div>
-
-      <div class="security-grid">
-        <div class="sec-item glass-panel">
-          <div class="sec-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          </div>
-          <h4>تنفيذ محلي 100% (Client-Side)</h4>
-          <p>جميع العمليات وحسابات التشفير وتوليد الأوامر تتم مباشرة داخل المتصفح أو على جهازك الشخصي. لا يوجد أي سيرفر وسيط يستلم بياناتك أبداً.</p>
-        </div>
-
-        <div class="sec-item glass-panel">
-          <div class="sec-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h4>صفر تسجيل (Zero-Log Policy)</h4>
-          <p>لا نقوم بتخزين أو مشاركة أي توكن أو معرف حساب أو بيانات شخصية. التوكنات تُستخدم فقط للتواصل المباشر مع واجهات ديسكورد الرسمية المشفرة TLS 1.3.</p>
-        </div>
-
-        <div class="sec-item glass-panel">
-          <div class="sec-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h4>اتصال مباشر مع خوادم Discord</h4>
-          <p>تتصل الأداة حصرياً مع بوابات <code>wss://gateway.discord.gg</code> ومسارات <code>https://discord.com/api/v10</code> مع شهادات الأمان الرسمية.</p>
-        </div>
-
-        <div class="sec-item glass-panel">
-          <div class="sec-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
-          </div>
-          <h4>خالٍ تماماً من علامات ومحتوى الذكاء الاصطناعي</h4>
-          <p>مبني ببرمجة بشرية احترافية نقية وتصميم هندسي دقيق بدون نصوص عشوائية أو علامات مائية أو تعقيدات تقنية غير لازمة.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="footer-logo">M9M<u>Q</u></span>
-        <p class="footer-tagline">DISCORD TELEMETRY PROTOCOL · ALL RIGHTS RESERVED © 2026</p>
-      </div>
-
-      <div class="footer-info">
-        <span>المطور الحصري: <strong>m9mq</strong></span>
-        <span class="dot-sep">•</span>
-        <span>معرف الحساب: <code>1318528650110304298</code></span>
-        <span class="dot-sep">•</span>
-        <span>النسخة: <code>v3.5 Turbo Edition</code></span>
-      </div>
+      <span class="footer-dev">DEVELOPED BY <strong>m9mq</strong></span>
     </div>
   </footer>
 
