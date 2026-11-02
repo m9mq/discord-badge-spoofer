@@ -228,7 +228,6 @@
         <div class="tier-card-img-wrap">
           <img src="${b.icon}" alt="${b.en}" class="tier-card-img" loading="lazy">
         </div>
-        <span class="tier-card-name-ar">${b.ar}</span>
         <span class="tier-card-name-en">${b.en}</span>
         <span class="tier-card-req">${b.req}</span>
       `;
@@ -252,8 +251,8 @@
   function updateActiveBadgePreview(badge) {
     if (!badge) return;
     activeTargetBadgeImg.src = badge.icon;
-    activeTargetBadgeName.textContent = `${badge.ar} (${badge.en})`;
-    activeTargetBadgeReq.textContent = `المطلوب: ${badge.req}`;
+    activeTargetBadgeName.textContent = badge.en;
+    activeTargetBadgeReq.textContent = `Target: ${badge.req}`;
   }
 
   // Update Presets row
@@ -261,42 +260,42 @@
     presetsRow.innerHTML = '';
     let presets = [];
     if (mode === 'stream') {
-      tierGalleryTitle.textContent = 'شارات الستريمر الرسمية (Streaming Badges):';
+      tierGalleryTitle.textContent = 'Streaming Badges (Select Tier):';
       quantityLabel.textContent = 'ساعات البث المستهدفة:';
       unitTag.textContent = 'ساعة';
       roomFieldBox.style.display = 'block';
       presets = [
-        { label: '20 ساعة', val: 20 },
-        { label: '75 ساعة', val: 75 },
-        { label: '300 ساعة', val: 300 },
-        { label: '1,000 ساعة', val: 1000 },
-        { label: '5,000h (الظاهرة)', val: 5000, active: true }
+        { label: '20h (Breakout)', val: 20 },
+        { label: '75h (Standout)', val: 75 },
+        { label: '300h (Headliner)', val: 300 },
+        { label: '1,000h (Sensation)', val: 1000 },
+        { label: '5,000h (Phenomenon)', val: 5000, active: true }
       ];
       targetCountInput.value = 5000;
     } else if (mode === 'gametime') {
-      tierGalleryTitle.textContent = 'شارات ساعات اللعب (Game Time Badges):';
+      tierGalleryTitle.textContent = 'Game Time Badges (Select Tier):';
       quantityLabel.textContent = 'ساعات الألعاب المطلوبة:';
       unitTag.textContent = 'ساعة';
       roomFieldBox.style.display = 'none';
       presets = [
-        { label: '20 ساعة', val: 20 },
-        { label: '150 ساعة', val: 150 },
-        { label: '500 ساعة', val: 500 },
-        { label: '1,000 ساعة', val: 1000 },
-        { label: '5,000h (الخالد)', val: 5000, active: true }
+        { label: '20h (Dedicated)', val: 20 },
+        { label: '150h (Serious)', val: 150 },
+        { label: '500h (Seasoned)', val: 500 },
+        { label: '1,000h (Ironclad)', val: 1000 },
+        { label: '5,000h (Eternal)', val: 5000, active: true }
       ];
       targetCountInput.value = 5000;
     } else if (mode === 'variety') {
-      tierGalleryTitle.textContent = 'شارات تنوع الألعاب (Game Variety Badges):';
+      tierGalleryTitle.textContent = 'Game Variety Badges (Select Tier):';
       quantityLabel.textContent = 'عدد الألعاب لتسجيلها:';
       unitTag.textContent = 'لعبة';
       roomFieldBox.style.display = 'none';
       presets = [
-        { label: '10 ألعاب', val: 10 },
-        { label: '20 لعبة', val: 20 },
-        { label: '40 لعبة', val: 40 },
-        { label: '80 لعبة', val: 80 },
-        { label: '100+ لعبة (الشامل)', val: 100, active: true }
+        { label: '10 Games (Enthusiast)', val: 10 },
+        { label: '20 Games (Explorer)', val: 20 },
+        { label: '40 Games (Voyager)', val: 40 },
+        { label: '80 Games (Polymath)', val: 80 },
+        { label: '100+ Games (Universalist)', val: 100, active: true }
       ];
       targetCountInput.value = 100;
     }
@@ -522,7 +521,7 @@
       liveLoggedHours.textContent = `${currentHours.toFixed(2)}h`;
 
       const curTier = getCurrentTier(currentHours, mode);
-      liveTierBadge.textContent = `${curTier.ar} (${curTier.en})`;
+      liveTierBadge.textContent = curTier.en;
       updateActiveBadgePreview(curTier);
 
       const pct = Math.min(100, (currentHours / targetAmount) * 100);
@@ -560,7 +559,7 @@
       liveLoggedHours.textContent = `${((targetHours / selected.length) * (i + 1)).toFixed(0)}h`;
 
       const curTier = getCurrentTier((targetHours / selected.length) * (i + 1), 'gametime');
-      liveTierBadge.textContent = `${curTier.ar} (${curTier.en})`;
+      liveTierBadge.textContent = curTier.en;
       updateActiveBadgePreview(curTier);
 
       await new Promise(r => setTimeout(r, 600));
@@ -600,7 +599,7 @@
       liveLoggedHours.textContent = `${i + 1} لعبة`;
 
       const curTier = getCurrentTier(i + 1, 'variety');
-      liveTierBadge.textContent = `${curTier.ar} (${curTier.en})`;
+      liveTierBadge.textContent = curTier.en;
       updateActiveBadgePreview(curTier);
 
       await new Promise(r => setTimeout(r, 400));
